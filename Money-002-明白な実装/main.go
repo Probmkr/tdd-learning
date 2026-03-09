@@ -8,6 +8,6 @@ func NewDollar(amount int) *Dollar {
 	return &Dollar{amount}
 }
 
-func (d *Dollar) Times(multiplier int) {
-	d.amount *= multiplier
+func (d *Dollar) Times(multiplier int) *Dollar {
+	return &Dollar{d.amount * multiplier}
 }
